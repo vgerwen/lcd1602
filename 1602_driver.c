@@ -16,12 +16,12 @@
  #define GPIO_STATE_HIGH 1 /*!< Logic high */
  
  /* Default pinout  in 4- bits mode*/
- #define DATA_0_PIN 19          /*!< DATA 4 */
- #define DATA_1_PIN 18          /*!< DATA 5 */
- #define DATA_2_PIN 17          /*!< DATA 6 */
- #define DATA_3_PIN 16          /*!< DATA 7 */
- #define ENABLE_PIN 22          /*!< Enable */
- #define REGISTER_SELECT_PIN 23 /*!< Register Select23  */
+ #define DATA_0_PIN CONFIG_DATA_0_PIN          /*!< DATA 4 via sdkconfig*/
+ #define DATA_1_PIN CONFIG_DATA_1_PIN          /*!< DATA 5 */
+ #define DATA_2_PIN CONFIG_DATA_2_PIN          /*!< DATA 6 */
+ #define DATA_3_PIN CONFIG_DATA_3_PIN          /*!< DATA 7 */
+ #define ENABLE_PIN CONFIG_ENABLE_PIN          /*!< Enable */
+ #define REGISTER_SELECT_PIN CONFIG_REGISTER_SELECT_PIN /*!< Register Select23  */
  
  /*
   * @brief Trigger LCD enable pin data is written to the LCD on falling edge
