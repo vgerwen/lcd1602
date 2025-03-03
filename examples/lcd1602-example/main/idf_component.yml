@@ -1,0 +1,7 @@
+dependencies:
+  1602_driver:
+    version: "*"
+    override_path: "../../../"
+description: LCD driv er for the LCD1602 device with 4 bits control
+url: "https://github.com/vgerwen/lcd1602"
+repository: "https://github.com/vgerwen/lcd1602.git"
