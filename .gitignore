@@ -65,4 +65,4 @@ dkms.conf
 doc/
 
 # Ignore sdkconfig 
-sdkconfig
+sdkconfig*
