@@ -1,6 +1,6 @@
 name: Push component to https://components.espressif.com
 on:
-  push:
+  workflow_dispatch:
     tags:
       - v*
 jobs:
