@@ -11,6 +11,6 @@ dependencies:
     version: 5.4.0
 direct_dependencies:
 - 1602_driver
-manifest_hash: e73fb0447475df5f7141421adb78996d44ddb335e96752acf4ae103dc3ab34fe
+manifest_hash: 2af0a1745091686b6ca5b928d4db7a634de18e3f964136ade2bb9421921152ba
 target: esp32
 version: 2.0.0

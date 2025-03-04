@@ -19,20 +19,14 @@ esp_err_t return_value = ESP_OK;
 void lcd_task(void *pvParameters)
 {
 
-  /* Create LCD object */
-  lcd_t lcd;
-
-  /* Set default pinout */
-  lcdDefault(&lcd);
-
   /* Initialize LCD object */
-  lcdInit(&lcd);
+  lcdInit();
 
   /* Clear previous data on LCD */
-  lcdClear(&lcd);
+  lcdClear();
 
   /* Custom text */
-  char buffer[16] = "Hello World!!";
+  char buffer[16] = "<<< LCD TEST >>>";
 /*
   float version = 1.0;
   char initial[2] = {'J', 'M'};
@@ -41,18 +35,30 @@ void lcd_task(void *pvParameters)
 */
      
   /* Set text */
-  lcd_err_t ret = lcdSetText(&lcd, buffer, 0, 0);
+  lcd_err_t ret = lcdSetText(buffer, 0, 0);
   
   /* create count variable */
   static int count = 0;
-
+  int row = 1;
   while (1)
   {
-       
-    lcdSetInt(&lcd, count, 0, 1);
+    lcdSetInt(count, 0, row);
     count++;     
-    /* 0,5 second delay */
-    vTaskDelay(500 / portTICK_PERIOD_MS);
+    /* 1 second delay */
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    if (count == 10) {
+      lcdClear();
+       count = 0;
+      /* Custom text */
+       char buffer[16] = "<<< LCD TEST >>>";
+       lcd_err_t ret = lcdSetText(buffer, 0, row);
+       if (row == 1){
+          row = 0;
+       }
+       else {
+          row = 1;
+       }
+    }   
   }
 }
 
