@@ -1,7 +1,7 @@
 # 1602 LCD driver
 
 This repository contains an ESP-IDF driver for LCD 1602 module with 4 bit data interface.This
-module contains two rows of 16 characters each.
+module contains two rows of 16 characters each. It runs on a ESP32 processor and is buidl using the ESP-IDF build system
 
 ## Connecting the component
 
@@ -21,12 +21,14 @@ These connections are made using **idf.py menuconfig** and choose the settings i
 
 ## LCD1602 library
 
-The libary only support teh LCD Module 1602 with a 4 bits interface,
+The libary only support the LCD Module 1602 with a 4 bits interface.
+It uses the ```esp_driver_gpio component```.
 
 # Usage
 
 ## API
-The API of teh driver is located in teh include directory include/1602_driver.h and has teh following functions
+The API of the driver is located in the include directory ```include/1602_driver.h``` and has the following functions:
+
 ```C
 - void lcdInit(void);
 - lcd_err_t lcdSetText(char *text, int x, int y);
