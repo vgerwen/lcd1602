@@ -16,5 +16,5 @@ jobs:
           components: |
             lcd1602: .
           version: ${{ github.ref_name }}
-          namespace: "espressif"
+          namespace: "vgerwen"
           api_token: ${{ secrets.IDF_COMPONENT_API_TOKEN }}
