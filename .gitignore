@@ -64,5 +64,8 @@ dkms.conf
 # Ignore doc
 doc/
 
+# Ignore dist folder
+dist/
+
 # Ignore sdkconfig 
 sdkconfig*
