@@ -288,7 +288,7 @@
  }
  
  
- void assert_lcd(lcd_err_t lcd_error)
+ void lcdAssert (lcd_err_t lcd_error)
  {
      if (lcd_error != LCD_OK)
      {

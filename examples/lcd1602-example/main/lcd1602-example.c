@@ -18,40 +18,41 @@ esp_err_t return_value = ESP_OK;
 
 void lcd_task(void *pvParameters)
 {
+  lcd_err_t ret = LCD_OK;
 
   /* Initialize LCD object */
   lcdInit();
 
   /* Clear previous data on LCD */
-  lcdClear();
+  ret = lcdClear();
+  lcdAssert(ret);
 
   /* Custom text */
   char buffer[16] = "<<< LCD TEST >>>";
-/*
-  float version = 1.0;
-  char initial[2] = {'J', 'M'};
-
-  sprintf(buffer, "Hello World!", version, initial[0], initial[1]);
-*/
      
   /* Set text */
-  lcd_err_t ret = lcdSetText(buffer, 0, 0);
+  ret = lcdSetText(buffer, 0, 0);
+  lcdAssert(ret);
   
   /* create count variable */
   static int count = 0;
   int row = 1;
+
   while (1)
   {
-    lcdSetInt(count, 0, row);
+    ret = lcdSetInt(count, 0, row);
+    lcdAssert(ret);
     count++;     
     /* 1 second delay */
     vTaskDelay(1000 / portTICK_PERIOD_MS);
     if (count == 10) {
-      lcdClear();
-       count = 0;
+      ret = lcdClear();
+      lcdAssert(ret);
+      count = 0;
       /* Custom text */
        char buffer[16] = "<<< LCD TEST >>>";
-       lcd_err_t ret = lcdSetText(buffer, 0, row);
+       ret = lcdSetText(buffer, 0, row);
+       lcdAssert(ret);
        if (row == 1){
           row = 0;
        }

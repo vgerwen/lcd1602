@@ -10,7 +10,7 @@ dependencies:
     source:
       path: E:\ESPprojects\component_folder\components\lcd1602
       type: local
-    version: 0.0.1
+    version: 0.0.2
 direct_dependencies:
 - vgerwen/lcd1602
 manifest_hash: 24fcdcf6b492bb27d6eb9b7eb201e6903bc09d10ad2873fa9b780403fefbc447

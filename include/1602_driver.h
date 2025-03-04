@@ -24,6 +24,6 @@ lcd_err_t lcdSetInt(int val, int x, int y);
 
 lcd_err_t lcdClear(void);
 
-void assert_lcd(lcd_err_t lcd_error);
+void lcdAssert(lcd_err_t lcd_error);
 
 #endif

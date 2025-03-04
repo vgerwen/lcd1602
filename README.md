@@ -1,7 +1,7 @@
 # 1602 LCD driver
 
 This repository contains an ESP-IDF driver for LCD 1602 module with 4 bit data interface.This
-module contains two rows of 16 characters each. It runs on a ESP32 processor and is buidl using the ESP-IDF build system
+module contains two rows of 16 characters each. It runs on a ESP32 processor and is build using the ESP-IDF build system
 
 ## Connecting the component
 
@@ -34,9 +34,9 @@ The API of the driver is located in the include directory ```include/1602_driver
 - lcd_err_t lcdSetText(char *text, int x, int y);
 - lcd_err_t lcdSetInt(int val, int x, int y);
 - lcd_err_t lcdClear(void);
-- void assert_lcd(lcd_err_t lcd_error);
+- void lcdAssert(lcd_err_t lcd_error);
 ```
-The driver does not use interrupt handlers and runs on the calling task. The driver does not block.
+The driver does not use interrupt handlers and API funcions run on the calling task. The driver API functions do not block.
 
 # Example
 
