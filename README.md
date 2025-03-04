@@ -60,4 +60,4 @@ This component is provided under MIT license, see [LICENSE](LICENSE.txt) file fo
 
 # Contributing
 
-Please check for contribution guidelines.
+Please check for contribution guidelines.tbd
