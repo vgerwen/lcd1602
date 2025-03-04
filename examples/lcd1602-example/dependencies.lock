@@ -1,16 +1,18 @@
 dependencies:
-  1602_driver:
-    dependencies: []
-    source:
-      path: E:\ESPprojects\component_folder\components\1602_driver
-      type: local
-    version: '*'
   idf:
     source:
       type: idf
     version: 5.4.0
+  vgerwen/lcd1602:
+    dependencies:
+    - name: idf
+      version: '>=4.4.0'
+    source:
+      path: E:\ESPprojects\component_folder\components\lcd1602
+      type: local
+    version: 0.0.1
 direct_dependencies:
-- 1602_driver
-manifest_hash: 2af0a1745091686b6ca5b928d4db7a634de18e3f964136ade2bb9421921152ba
+- vgerwen/lcd1602
+manifest_hash: 24fcdcf6b492bb27d6eb9b7eb201e6903bc09d10ad2873fa9b780403fefbc447
 target: esp32
 version: 2.0.0

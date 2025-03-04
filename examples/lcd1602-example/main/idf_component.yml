@@ -1,4 +1,4 @@
 dependencies:
-  vgerwen/1602_driver:
+  vgerwen/lcd1602:
     version: "*"
     override_path: "../../../"
