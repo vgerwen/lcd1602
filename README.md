@@ -36,7 +36,7 @@ The API of the driver is located in the include directory ```include/1602_driver
 - lcd_err_t lcdClear(void);
 - void assert_lcd(lcd_err_t lcd_error);
 ```
-The driver does not use interrupt handlers and runs on the calling task.
+The driver does not use interrupt handlers and runs on the calling task. The driver does not block.
 
 # Example
 
@@ -51,12 +51,12 @@ And flash it to the board:
 ``` shell
 idf.py -p PORT flash monitor
 ```
-The example code writes the string <<< LCD TEST >>> on the first row on the seconf row a counter from 0 incrementing every second till 10 is displayed
+The example code writes the string <<< LCD TEST >>> on the first row on the second row a counter from 0 incrementing every second till 10 is displayed
 If the counter reaches 10 the counter resets to 0 and both rows are flipped. i.e. The string <<< LCD TEST >>> will be on on row 1 and the counter on row 0. This flipping repeats endless.
 
 # License
 
-This component is provided under Apache 2.0 license, see [LICENSE](LICENSE.md) file for details.
+This component is provided under MIT license, see [LICENSE](LICENSE.txt) file for details.
 
 # Contributing
 
