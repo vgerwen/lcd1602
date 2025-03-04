@@ -1,5 +1,5 @@
-version: 0.0.2
-license: MIT
+version: "0.0.2"
+license: "MIT"
 description: LCD driver for the CFA H LCD1602 module with 4 bits control interface
 url: "https://github.com/vgerwen/lcd1602"
 issues: https://github.com/vgerwen/lcd1602/issues
