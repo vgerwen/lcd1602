@@ -7,14 +7,19 @@
  * @copyright Copyright (c) 2025
  *
  */
-#ifndef _1602_DRIVER_H_
-#define _1602_DRIVER_H_
+#pragma once
 
-/* LCD Error */
-typedef int lcd_err_t;      /*!< LCD error type */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-#define LCD_FAIL            -1  /*!< LCD fail error     */
-#define LCD_OK               0  /*!< LCD success    */
+
+// LCD Error type
+typedef int lcd_err_t;      
+
+#define LCD_FAIL            -1  // LCD fail error
+#define LCD_OK               0  // LCD success
+
 
 void lcdInit(void);
 
@@ -26,4 +31,7 @@ lcd_err_t lcdClear(void);
 
 void lcdAssert(lcd_err_t lcd_error);
 
+
+#ifdef __cplusplus
+}
 #endif
