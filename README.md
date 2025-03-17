@@ -8,8 +8,8 @@ module contains two rows of 16 characters each. It runs on a ESP32 processor and
 The driver uses 6 GPIO output pins of the ESP32.
 
 
-|    | LCD PIN   | ESP32 Pin                  | Default GPIO
-|---:+----------:|:--------------------------:|:-----------:|
+|      | LCD PIN   | ESP32 Pin                  | Default GPIO |
+|:----:|:----------|:--------------------------|:-----------:|
 | 1  | GND       | GND                        |             |
 | 2  | VCC       | 5V                         |             |
 | 3  | VL        | 10k potmeter               |             |
