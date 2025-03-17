@@ -8,17 +8,27 @@ module contains two rows of 16 characters each. It runs on a ESP32 processor and
 The driver uses 6 GPIO output pins of the ESP32.
 
 
-| LCD PIN   | ESP driver                 | Default GPIO
-| ---------:|:--------------------------:| :-----------:|
-| RS        | CONFIG_REGISTER_SELECT_PIN | 23           |
-| EN        | CONFIG_ENABLE_PIN          | 22           |
-| D3        | CONFIG_DATA_3_PIN          | 16           |
-| D2        | CONFIG_DATA_2_PIN          | 17           |
-| D1        | CONFIG_DATA_1_PIN          | 18           |
-| D0        | CONFIG_DATA_0_PIN          | 19           |
+|    | LCD PIN   | ESP32 Pin                  | Default GPIO
+|---:+----------:|:--------------------------:|:-----------:|
+| 1  | GND       | GND                        |             |
+| 2  | VCC       | 5V                         |             |
+| 3  | VL        | 10k potmeter               |             |
+| 4  | RS        | CONFIG_REGISTER_SELECT_PIN | 23          |
+| 5  | RW        | GND                        |             |
+| 6  | EN        | CONFIG_ENABLE_PIN          | 22          |
+| 7  | D0        | N.C.                       |             |
+| 8  | D1        | N.C.                       |             |
+| 9  | D2        | N.C.                       |             |
+| 10 | D3        | N.C.                       |             |
+| 11 | D4        | CONFIG_DATA_0_PIN          | 19          |
+| 12 | D5        | CONFIG_DATA_1_PIN          | 18          |
+| 13 | D6        | CONFIG_DATA_2_PIN          | 17          |
+| 14 | D7        | CONFIG_DATA_3_PIN          | 16          |
+| 15 | BL+       | VCC                        |             |
+| 16|  BL-       | GND                        |             |
 
-These connections are made using **idf.py menuconfig** and choose the settings in the menu under **Component config --->App main**
-
+These connections of the CONFIG_XX pins are made using **idf.py menuconfig** and choose the settings in the menu under **Component config --->App main**
+The 10K potentiometer for contrast adjustment is connected between VCC and GND with the center to pin 3 - VL.
 ## LCD1602 library
 
 The libary only support the LCD Module 1602 with a 4 bits interface.
